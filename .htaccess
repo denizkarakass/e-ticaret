@@ -1,0 +1,43 @@
+
+RewriteEngine On 
+RewriteRule ^anasayfa$  index.php?SK=0 [L,NC]
+RewriteRule ^$  index.php?SK=0 [L,NC]
+RewriteRule ^iletişim$  index.php?SK=1 [L,NC]
+RewriteRule ^hakkımızda$  index.php?SK=2 [L,NC]
+RewriteRule ^teslimat-koşulları$  index.php?SK=3 [L,NC]
+RewriteRule ^üyelik-sözleşmesi$  index.php?SK=4 [L,NC]
+RewriteRule ^satıs-sözleşmesi$  index.php?SK=5 [L,NC]
+RewriteRule ^garanti-ve-iade$  index.php?SK=6 [L,NC]
+RewriteRule ^gizlilik-ve-guvenlik$  index.php?SK=7 [L,NC]
+RewriteRule ^kargom-nerede$  index.php?SK=8 [L,NC]
+RewriteRule ^mağazalarımız$  index.php?SK=14 [L,NC]
+RewriteRule ^sıkça-sorulan-sorular$  index.php?SK=15 [L,NC]
+RewriteRule ^yeni-üye-kayıt$  index.php?SK=22 [L,NC]
+RewriteRule ^üye-girişi$  index.php?SK=31 [L,NC]
+RewriteRule ^hesap-bilgilerim$  index.php?SK=49 [L,NC]
+RewriteRule ^adreslerim$  index.php?SK=58 [L,NC]
+RewriteRule ^siparişlerim$  index.php?SK=61 [L,NC]
+RewriteRule ^çıkış$  index.php?SK=50 [L,NC]
+
+RewriteRule ^cep-telefonları-ve-tabletler$  index.php?SK=78&id=1 [L,NC]
+RewriteRule ^robot-süpürgeler$  index.php?SK=76&id=4 [L,NC]
+RewriteRule ^akıllı-saat-ve-bileklikler$  index.php?SK=76&id=13 [L,NC]
+RewriteRule ^ekosistem$  index.php?SK=78&id=2 [L,NC]
+RewriteRule ^kulaklıklar$  index.php?SK=76&id=15 [L,NC]
+RewriteRule ^fitness$  index.php?SK=76&id=12 [L,NC]
+RewriteRule ^çıkış$  index.php?SK=50 [L,NC]
+RewriteRule ^çıkış$  index.php?SK=50 [L,NC]
+
+
+
+ErrorDocument 404 http://www.mimagaza.com/404.php
+
+ RewriteCond %{HTTPS} off
+ RewriteCond %{HTTP:X-Forwarded-SSL} !on
+ RewriteCond %{HTTP_HOST} ^mimagaza\.com$ [OR]
+ RewriteCond %{HTTP_HOST} ^mimagaza.com [NC]
+ RewriteRule ^(.*)$ https://www.mimagaza.com/ [L,R=301,NC]
+ RewriteCond %{HTTP_HOST} ^www\.mimagaza\.com$
+ RewriteRule ^/?$ "https\:\/\/www\.mimagaza\.com\/" [R=301,L]
+ 
+
